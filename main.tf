@@ -6,3 +6,9 @@ Name = "harika-vpc"
 }
 }
 
+resource "aws_internet_gateway" "harika_gateway" {
+ vpc_id = "${aws_vpc.harika-vpc.id}"
+ tags = {
+  Name = "harika-gateway"
+ }
+}
